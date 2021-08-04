@@ -3,15 +3,23 @@
 $overpass: Overpass, sans-serif;
 $ubuntu: Ubuntu, sans-serif;
 
+//font-sizes
+$font-small: 1rem;
+$font-smaller-med: 1.25rem;
+$font-med: 1.5625rem;
+$font-large: 2.25rem;
+
 //colors
 
 $lightRed: hsl(356, 100%, 66%);
 $veryLightRed: hsl(355, 100%, 74%);
 $veryDarkBlue: hsl(208, 49%, 24%);
 
-$greyishBlue: hsl(240, 2%, 79%);
+$greyishBlue: hsl(240, 3%, 79%);
 $veryDarkGreyishBlue: hsl(207, 13%, 34%);
 $veryDarkBlackBlue: hsl(240, 10%, 16%);
+
+$white: hsl(0, 0%, 100%);
 
 $heroGradient: linear-gradient(
     to right,

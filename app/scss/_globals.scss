@@ -10,7 +10,10 @@ html {
 }
 
 body {
-    font-family: $overpass;
+    font-family: $ubuntu;
+    font-size: $font-small;
+    font-weight: 500;
+    color: $white;
     margin: 0;
     padding: 0;
     line-height: 1.3;
@@ -32,4 +35,12 @@ body {
     &-ai-c {
         align-items: center;
     }
+}
+
+//links
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
 }

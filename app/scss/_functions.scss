@@ -1,0 +1,11 @@
+@function set-text-color($color) {
+    @if (lightness($color) > 80) and (alpha($color) > 0.7) {
+        @return $lightRed;
+    } @else {
+        @return $white;
+    }
+}
+
+@function lighten-color($color) {
+    @return transparentize($color, 0.5);
+}
