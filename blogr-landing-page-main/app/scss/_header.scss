@@ -8,7 +8,7 @@
     border-radius: 0 0 0 97px;
 
     nav {
-        padding: 56px 25px;
+        padding: 56px 0;
     }
 
     &__logo {
@@ -18,7 +18,7 @@
     }
 
     &__hamburger {
-        margin: 0 1.437rem;
+        margin: 0;
 
         > span {
             display: block;
@@ -36,14 +36,15 @@
     &__dropdown {
         @include ul-nostyle;
 
-        li {
+        > li {
             margin-left: 1.8em;
             color: $greyishBlue;
+            position: relative;
 
             .arrow {
                 margin-left: 0.4em;
 
-                .open {
+                &__open > svg {
                     transform: rotate(180deg);
                 }
             }
@@ -52,6 +53,43 @@
                 cursor: pointer;
                 color: $white;
                 text-decoration: underline solid 2px;
+            }
+        }
+
+        &__menu {
+            @include ul-nostyle;
+            display: none;
+            position: absolute;
+            font-weight: 400;
+            text-align: start;
+            width: 10.625em;
+            padding: 2.18em 1.1625em;
+            top: 2.5em;
+            left: -1.25em;
+            background: $white;
+            border-radius: 5px;
+            box-shadow: 0 0 2em 0.3em rgba(0, 0, 0, 0.2);
+            z-index: 100;
+
+            > li {
+                color: $veryDarkGreyishBlue;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 1.437em;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    font-weight: 500;
+                    color: $veryDarkBlackBlue;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        & .open {
+            .header__dropdown__menu {
+                display: block;
             }
         }
     }

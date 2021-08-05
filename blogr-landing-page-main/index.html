@@ -20,28 +20,52 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header container">
     <nav class="flex flex-jc-sb flex-ai-c">
-      <a href="/" class="header__logo flex flex-ai-c">
-        <img src="images/logo.svg" alt="logo">
-      </a>
+      <section class="header__menu flex flex-jc-sb flex-ai-c">
+        <a href="/" class="header__logo flex flex-ai-c">
+          <img src="images/logo.svg" alt="logo">
+        </a>
 
-      <a href="#" class="header__hamburger">
+        <ul class="header__dropdown flex flex-jc-sb flex-ai-c hide-for-mobile">
+          <li>Product <i class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                <path fill="none" stroke="#c8c8cb" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4" /></svg></i>
+            <ul class="header__dropdown__menu">
+              <li>Overview</li>
+              <li>Pricing</li>
+              <li>Marketplace</li>
+              <li>Features</li>
+              <li>Integrations</li>
+            </ul>
+          </li>
+          <li>Company <i class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                <path fill="none" stroke="#c8c8cb" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4" /></svg></i>
+            <ul class="header__dropdown__menu">
+              <li>About</li>
+              <li>Team</li>
+              <li>Blog</li>
+              <li>Careers</li>
+            </ul>
+          </li>
+          <li>Connect <i class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                <path fill="none" stroke="#c8c8cb" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4" /></svg></i>
+            <ul class="header__dropdown__menu">
+              <li>Contact</li>
+              <li>Newsletter</li>
+              <li>LinkedIn</li>
+            </ul>
+          </li>
+
+        </ul>
+      </section>
+
+      <a href="#" class="header__hamburger hide-for-desktop">
         <span></span>
         <span></span>
         <span></span>
       </a>
 
-      <ul class="header__dropdown flex flex-jc-sb flex-ai-c">
-        <li>Product <i class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
-              <path fill="none" stroke="#c8c8cb" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4" /></svg></i></li>
-        <li>Company <i class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
-              <path fill="none" stroke="#c8c8cb" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4" /></svg></i></li>
-        <li>Connect <i class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
-              <path fill="none" stroke="#c8c8cb" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4" /></svg></i></li>
-      </ul>
-
-      <div class="header__cta flex flex-ai-c">
+      <div class="header__cta flex flex-ai-c hide-for-mobile">
         <a href="#" class="btn btn-1">Login</a>
         <a href="#" class="btn btn-2">Sign Up</a>
       </div>
@@ -69,9 +93,7 @@
 
   Connect
 
-  Contact
-  Newsletter
-  LinkedIn
+  
   
   Login
   Sign Up
@@ -109,18 +131,11 @@
 
   Product
 
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
+  
 
   Company
 
-  About
-  Team
-  Blog
-  Careers
+  
 
   Connect
   

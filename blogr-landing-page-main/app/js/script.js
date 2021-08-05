@@ -1,17 +1,31 @@
-const headerOptions = document.querySelectorAll('.header__dropdown li');
-const dropdownArrows = document.querySelectorAll('.header__dropdown li i svg');
+const dropdownElements = document.querySelectorAll('.header__dropdown > li');
+const arrows = document.querySelectorAll('.header__dropdown > li .arrow');
+const arrowSVGPath = document.querySelectorAll('.header__dropdown > li i svg path');
 
-headerOptions.forEach(function (option, idx) {
+dropdownElements.forEach(function (option, idx) {
     option.addEventListener('mouseover', () => {
-        dropdownArrows[idx].lastChild.setAttribute('stroke', '#fff');
+        arrowSVGPath[idx].setAttribute('stroke', '#fff');
     })
     option.addEventListener('mouseout', () => {
-        dropdownArrows[idx].lastChild.setAttribute('stroke', '#c8c8cb');
+        arrowSVGPath[idx].setAttribute('stroke', '#c8c8cb');
     })
 
     option.addEventListener('click', () => {
-        dropdownArrows[idx].classList.toggle('open');
-
-        // Add this class to the li, not .arrow
+        if (option.classList.contains("open")) {
+            option.classList.remove("open");
+            arrows[idx].classList.remove("arrow__open");
+        } else {
+            closeAllOptions();
+            option.classList.add("open");
+            arrows[idx].classList.add("arrow__open");
+        }
     })
+
 });
+
+function closeAllOptions() {
+    dropdownElements.forEach((option, idx) => {
+        option.classList.remove("open");
+        arrows[idx].classList.remove("arrow__open");
+    });
+}
