@@ -9,6 +9,8 @@
     &-1 {
         color: $white;
         margin: 0 2em;
+        width: 8.437rem;
+        border-radius: 100vh;
     }
     &-2 {
         background-color: $white;
@@ -16,9 +18,40 @@
         width: 8.437rem;
         border-radius: 100vh;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: lighten-color($white);
             color: set-text-color(lighten-color($white));
         }
     }
+
+    &-3 {
+        background-color: transparent;
+        color: set-text-color(transparent);
+        width: 8.437rem;
+        border-radius: 100vh;
+        border: solid 2px $white;
+
+        &:hover,
+        &:focus {
+            background-color: $white;
+            color: set-text-color($white);
+        }
+    }
+
+    &-4 {
+        background: $heroGradient;
+        color: $white;
+        width: 8.437rem;
+        border-radius: 100vh;
+
+        &:hover,
+        &:focus {
+            color: set-text-color(lighten-color($white));
+        }
+    }
+}
+
+.btn--text--grey {
+    color: $veryDarkBlackBlue;
 }

@@ -3,12 +3,20 @@
     background-image: url(../../images/bg-pattern-intro.svg), $heroGradient;
     background-position: 25%, center;
     background-size: auto;
+    @include breakpoint-down("medium") {
+        background-position: 35% 35%, center;
+        background-size: 322%, auto;
+    }
     background-repeat: no-repeat;
     height: 37.5rem;
     border-radius: 0 0 0 97px;
 
     nav {
-        padding: 56px 0;
+        padding-top: 3.5rem;
+        margin-bottom: 10rem;
+        @include breakpoint-down("medium") {
+            margin-bottom: 7rem;
+        }
     }
 
     &__logo {
@@ -19,12 +27,16 @@
 
     &__hamburger {
         margin: 0;
+        cursor: pointer;
 
         > span {
             display: block;
             width: 2.125rem;
             height: 0.25rem;
             background: #fff;
+            transform-origin: 3px;
+            transition: transform 450ms cubic-bezier(0.16, 0.66, 0.32, 1.16),
+                opacity 450ms ease;
 
             &:not(:last-of-type) {
                 margin: 0;
@@ -40,14 +52,6 @@
             margin-left: 1.8em;
             color: $greyishBlue;
             position: relative;
-
-            .arrow {
-                margin-left: 0.4em;
-
-                &__open > svg {
-                    transform: rotate(180deg);
-                }
-            }
 
             &:hover {
                 cursor: pointer;
@@ -68,14 +72,13 @@
             left: -1.25em;
             background: $white;
             border-radius: 5px;
-            box-shadow: 0 0 2em 0.3em rgba(0, 0, 0, 0.2);
             z-index: 100;
 
             > li {
                 color: $veryDarkGreyishBlue;
 
                 &:not(:last-of-type) {
-                    margin-bottom: 1.437em;
+                    margin-bottom: 1.437rem;
                 }
 
                 &:hover {
@@ -85,12 +88,148 @@
                     text-decoration: none;
                 }
             }
+
+            // For Hamburger
+
+            &.dropdown--hamburger {
+                position: absolute;
+                background-color: $greyishBlueAlpha;
+                top: 1.5625rem;
+                left: 0;
+                width: 17.4375rem;
+                font-size: $font-smaller-med;
+                font-weight: 600;
+
+                > li {
+                    opacity: 1;
+                    padding: 0;
+                    color: $veryDarkGreyishBlue;
+                    cursor: pointer;
+
+                    &:not(:last-of-type) {
+                        margin-bottom: 1.5625rem;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        color: $veryDarkBlackBlue;
+                        font-weight: 600;
+                    }
+                }
+            }
         }
+
+        // For intro
 
         & .open {
             .header__dropdown__menu {
                 display: block;
             }
+        }
+    }
+
+    &__menu {
+        display: none;
+    }
+
+    //Hambuerger Opened
+    &.open {
+        .header__hamburger {
+            > span:first-child {
+                transform: rotate(45deg);
+            }
+            > span:nth-child(2) {
+                opacity: 0;
+                transform: rotate(45deg);
+            }
+            > span:last-child {
+                transform: rotate(-405deg);
+            }
+        }
+    }
+
+    .header__menu {
+        display: flex;
+        @include breakpoint-up("large") {
+            display: none;
+        }
+        position: absolute;
+        top: 25%;
+        width: calc(100% - 3rem);
+        padding-top: 1.187rem;
+        padding-bottom: 2.375rem;
+        font-family: $overpass;
+        font-weight: 600;
+        text-align: center;
+        background: $white;
+        border-radius: 5px;
+        z-index: 200;
+
+        &__items {
+            @include ul-nostyle;
+            font-size: $font-smaller-med;
+
+            > li {
+                display: block;
+                color: $veryDarkBlackBlue;
+                padding: 1.187rem 0;
+                cursor: pointer;
+            }
+
+            .header__dropdown__menu {
+                cursor: default;
+                position: relative;
+                padding: 1.5625em 1.1625em;
+
+                // Hambuger Item Opened
+
+                &.open {
+                    display: flex;
+                    color: $veryDarkGreyishBlue;
+                }
+            }
+        }
+
+        &__partition {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 100%;
+            opacity: 0.4;
+            margin-top: 2rem;
+            background-color: $greyishBlue;
+        }
+
+        &__cta {
+            a {
+                display: block;
+                margin: 0 auto;
+                font-family: $ubuntu;
+                font-weight: 500;
+            }
+        }
+    }
+
+    // Hero
+
+    .hero {
+        text-align: center;
+
+        &__heading {
+            margin: 0 0 3.125rem 0;
+
+            h1 {
+                margin: 1.5rem;
+            }
+
+            h3 {
+                margin: 0;
+            }
+        }
+
+        .start-cta {
+            width: 18.125rem;
+            margin: 0 auto;
         }
     }
 }

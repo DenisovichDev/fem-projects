@@ -7,7 +7,9 @@ $ubuntu: Ubuntu, sans-serif;
 $font-small: 1rem;
 $font-smaller-med: 1.25rem;
 $font-med: 1.5625rem;
+$font-large-mobile: 1.9rem;
 $font-large: 2.25rem;
+$font-xlarge: 3.6rem;
 
 //colors
 
@@ -16,6 +18,7 @@ $veryLightRed: hsl(355, 100%, 74%);
 $veryDarkBlue: hsl(208, 49%, 24%);
 
 $greyishBlue: hsl(240, 3%, 79%);
+$greyishBlueAlpha: hsla(240, 3%, 79%, 0.4);
 $veryDarkGreyishBlue: hsl(207, 13%, 34%);
 $veryDarkBlackBlue: hsl(240, 10%, 16%);
 

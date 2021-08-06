@@ -22,7 +22,7 @@
 <body>
   <header class="header container">
     <nav class="flex flex-jc-sb flex-ai-c">
-      <section class="header__menu flex flex-jc-sb flex-ai-c">
+      <section class="header__intro flex flex-jc-sb flex-ai-c">
         <a href="/" class="header__logo flex flex-ai-c">
           <img src="images/logo.svg" alt="logo">
         </a>
@@ -30,7 +30,7 @@
         <ul class="header__dropdown flex flex-jc-sb flex-ai-c hide-for-mobile">
           <li>Product <i class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
                 <path fill="none" stroke="#c8c8cb" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4" /></svg></i>
-            <ul class="header__dropdown__menu">
+            <ul class="header__dropdown__menu shadow-cast">
               <li>Overview</li>
               <li>Pricing</li>
               <li>Marketplace</li>
@@ -40,7 +40,7 @@
           </li>
           <li>Company <i class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
                 <path fill="none" stroke="#c8c8cb" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4" /></svg></i>
-            <ul class="header__dropdown__menu">
+            <ul class="header__dropdown__menu shadow-cast">
               <li>About</li>
               <li>Team</li>
               <li>Blog</li>
@@ -49,7 +49,7 @@
           </li>
           <li>Connect <i class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
                 <path fill="none" stroke="#c8c8cb" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4" /></svg></i>
-            <ul class="header__dropdown__menu">
+            <ul class="header__dropdown__menu shadow-cast">
               <li>Contact</li>
               <li>Newsletter</li>
               <li>LinkedIn</li>
@@ -71,6 +71,56 @@
       </div>
     </nav>
 
+    <!-- Hamburger Toggle Menu -->
+    <div class="header__menu container shadow-cast hide-for-desktop flex flex-ai-c flex-fd-c flex-jc-c has-fade">
+      <ul class="header__menu__items">
+        <li>Product <i class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+              <path fill="none" stroke="#ff525d" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4" /></svg></i>
+          <ul class="header__dropdown__menu dropdown--hamburger flex flex-ai-c flex-jc-c flex-fd-c has-fade">
+            <li>Overview</li>
+            <li>Pricing</li>
+            <li>Marketplace</li>
+            <li>Features</li>
+            <li>Integrations</li>
+          </ul>
+        </li>
+        <li>Company <i class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+              <path fill="none" stroke="#ff525d" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4" /></svg></i>
+          <ul class="header__dropdown__menu dropdown--hamburger flex flex-ai-c flex-jc-c flex-fd-c has-fade">
+            <li>About</li>
+            <li>Team</li>
+            <li>Blog</li>
+            <li>Careers</li>
+          </ul>
+        </li>
+        <li>Connect <i class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+              <path fill="none" stroke="#ff525d" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4" /></svg></i>
+          <ul class="header__dropdown__menu dropdown--hamburger flex flex-ai-c flex-jc-c flex-fd-c has-fade">
+            <li>Contact</li>
+            <li>Newsletter</li>
+            <li>LinkedIn</li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="header__menu__partition"></div>
+
+      <div class="header__menu__cta">
+        <a href="#" class="btn btn-1 btn--text--grey">Login</a>
+        <a href="#" class="btn btn-4">Sign Up</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="hero__heading">
+        <h1>A modern publishing platform</h1>
+        <h3>Grow your audience and build your online brand</h3>
+      </div>
+      <div class="start-cta flex flex-jc-sb flex-ai-c">
+        <a href="#" class="btn btn-2">Start for Free</a>
+        <a href="#" class="btn btn-3">Learn More</a>
+      </div>
+    </div>
   </header>
 
 
@@ -98,8 +148,8 @@
   Login
   Sign Up
 
-  A modern publishing platform
-  Grow your audience and build your online brand
+  
+  
 
   Start for Free
   Learn More

@@ -1,31 +1,82 @@
+// Elements
+
+const body = document.querySelector("body");
 const dropdownElements = document.querySelectorAll('.header__dropdown > li');
-const arrows = document.querySelectorAll('.header__dropdown > li .arrow');
-const arrowSVGPath = document.querySelectorAll('.header__dropdown > li i svg path');
+const introArrows = document.querySelectorAll('.header__dropdown > li .arrow');
+const introArrowSVGPath = document.querySelectorAll('.header__dropdown > li i svg path');
+const hamburger = document.querySelector(".header__hamburger");
+const header = document.querySelector(".header");
+const headerMenu = document.querySelector(".header__menu");
+const hamburgerItems = document.querySelectorAll('.header__menu__items > li');
+const hamburgerItemsMenu = document.querySelectorAll('.header__menu__items > li ul');
+const hamburgerArrows = document.querySelectorAll('.header__menu__items .arrow');
+const hamburgerArrowsSVGPath = document.querySelectorAll('.header__menu__items .arrow > svg path');
+
+// Code
 
 dropdownElements.forEach(function (option, idx) {
     option.addEventListener('mouseover', () => {
-        arrowSVGPath[idx].setAttribute('stroke', '#fff');
+        introArrowSVGPath[idx].setAttribute('stroke', '#fff');
     })
     option.addEventListener('mouseout', () => {
-        arrowSVGPath[idx].setAttribute('stroke', '#c8c8cb');
+        introArrowSVGPath[idx].setAttribute('stroke', '#c8c8cb');
     })
 
     option.addEventListener('click', () => {
         if (option.classList.contains("open")) {
             option.classList.remove("open");
-            arrows[idx].classList.remove("arrow__open");
+            introArrows[idx].classList.remove("open");
         } else {
-            closeAllOptions();
+            closeAllOptions(dropdownElements, introArrows);
             option.classList.add("open");
-            arrows[idx].classList.add("arrow__open");
+            introArrows[idx].classList.add("open");
         }
     })
 
 });
 
-function closeAllOptions() {
-    dropdownElements.forEach((option, idx) => {
+function closeAllOptions(nodeList, arrowList) {
+    nodeList.forEach((option, idx) => {
         option.classList.remove("open");
-        arrows[idx].classList.remove("arrow__open");
+        arrowList[idx].classList.remove("open");
     });
 }
+
+// Hamburger Toggle
+
+hamburger.addEventListener('click', () => {
+    if (header.classList.contains('open')) {
+        // Hamburger Menu Close
+
+        header.classList.remove('open');
+        body.classList.remove('noscroll');
+        headerMenu.classList.add('fade-out');
+        headerMenu.classList.remove('fade-in');
+    } else {
+        // Hamburger Menu Open
+
+        header.classList.add('open');
+        body.classList.add('noscroll');
+        headerMenu.classList.add('fade-in');
+        headerMenu.classList.remove('fade-out');
+    }
+
+})
+
+// Hamburger Item Toggle
+
+hamburgerItems.forEach(function (option, idx) {
+    option.addEventListener('click', () => {
+
+        if (hamburgerItemsMenu[idx].classList.contains('open')) {
+            hamburgerItemsMenu[idx].classList.remove('open', 'fade-out');
+            hamburgerItemsMenu[idx].classList.remove('fade-in');
+            hamburgerArrows[idx].classList.remove("open");
+        } else {
+            closeAllOptions(hamburgerItemsMenu, hamburgerArrows);
+            hamburgerItemsMenu[idx].classList.add('open', 'fade-in');
+            hamburgerItemsMenu[idx].classList.remove('fade-out');
+            hamburgerArrows[idx].classList.add("open");
+        }
+    })
+})

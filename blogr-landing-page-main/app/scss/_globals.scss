@@ -17,6 +17,10 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.3;
+
+    &.noscroll {
+        overflow: hidden;
+    }
 }
 
 // Flexbox
@@ -35,6 +39,10 @@ body {
     &-ai-c {
         align-items: center;
     }
+
+    &-fd-c {
+        flex-direction: column;
+    }
 }
 
 //links
@@ -46,22 +54,50 @@ a:hover {
 }
 
 .container {
-    padding: 0 10em;
+    padding: 0 8em;
     @include breakpoint-down("medium") {
         padding: 0 1.5em;
     }
 }
 
-// Visibility
+//typography
 
-.hide-for-mobile {
+h1 {
+    font-family: $overpass;
+    font-size: $font-xlarge;
+    font-weight: 600;
+
     @include breakpoint-down("medium") {
-        display: none;
+        font-size: $font-large;
+    }
+
+    @include breakpoint-down("small") {
+        font-size: $font-large-mobile;
     }
 }
 
-.hide-for-desktop {
-    @include breakpoint-up("large") {
-        display: none;
+h3 {
+    font-family: $overpass;
+    font-size: $font-smaller-med;
+    font-weight: 300;
+
+    @include breakpoint-down("medium") {
+        font-size: $font-small;
+    }
+}
+
+// Shadow
+
+.shadow-cast {
+    box-shadow: 0 0 2em 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+// Arrow
+
+.arrow {
+    margin-left: 0.4em;
+
+    &.open > svg {
+        transform: rotate(180deg);
     }
 }
