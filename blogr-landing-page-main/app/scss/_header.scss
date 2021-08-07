@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    background-image: url(../../images/bg-pattern-intro.svg), $heroGradient;
+    background-image: url(../images/bg-pattern-intro.svg), $heroGradient;
     background-position: 25%, center;
     background-size: auto;
     @include breakpoint-down("medium") {

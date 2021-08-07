@@ -9,6 +9,7 @@ html {
 *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -248,8 +249,8 @@ h3 {
 
 .header {
   position: relative;
-  background-image: url(../../images/bg-pattern-intro.svg), -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
-  background-image: url(../../images/bg-pattern-intro.svg), linear-gradient(to right, #ff8f70, #ff3d54);
+  background-image: url(../images/bg-pattern-intro.svg), -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+  background-image: url(../images/bg-pattern-intro.svg), linear-gradient(to right, #ff8f70, #ff3d54);
   background-position: 25%, center;
   background-size: auto;
   background-repeat: no-repeat;
