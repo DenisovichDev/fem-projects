@@ -172,7 +172,7 @@ h3 {
 }
 
 .btn-4:hover, .btn-4:focus {
-  color: white;
+  opacity: 0.9;
 }
 
 .btn--text--grey {

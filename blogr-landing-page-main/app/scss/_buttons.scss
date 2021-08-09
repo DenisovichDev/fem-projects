@@ -47,7 +47,7 @@
 
         &:hover,
         &:focus {
-            color: set-text-color(lighten-color($white));
+            opacity: 0.9;
         }
     }
 }
