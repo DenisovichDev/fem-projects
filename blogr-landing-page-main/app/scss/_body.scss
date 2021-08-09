@@ -1,0 +1,63 @@
+.body {
+    // Global Modifications
+
+    text-align: center;
+    overflow: hidden;
+
+    @include breakpoint-up("large") {
+        //height: 882px;
+        height: 1000px;
+    }
+
+    h2 {
+        color: $veryDarkBlue;
+    }
+
+    p {
+        color: $veryDarkGreyishBlue;
+    }
+
+    // Introduction Part
+
+    .introduction {
+        position: relative;
+        margin: 6.75rem 0 16.875rem 0;
+
+        @include breakpoint-up("large") {
+            margin-top: 0rem;
+            padding-top: 10rem;
+        }
+
+        &__text {
+            @include breakpoint-up("large") {
+                text-align: left;
+                width: 50%;
+            }
+        }
+
+        &__heading {
+            margin-top: 0rem;
+            margin-bottom: 1.5rem;
+
+            @include breakpoint-up("large") {
+                margin-bottom: 6.875rem;
+            }
+        }
+
+        &__image__mobile {
+            height: 335px;
+            background-image: url(../images/illustration-editor-mobile.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: 300;
+            margin: 0 -1.5em;
+        }
+
+        &__image__desktop {
+            position: absolute;
+            top: 4.25rem;
+            left: 50%;
+        }
+    }
+}

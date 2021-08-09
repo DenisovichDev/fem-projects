@@ -75,31 +75,78 @@ a:hover {
 
 h1 {
   font-family: Overpass, sans-serif;
-  font-size: 3.6rem;
+  font-size: 1.9rem;
   font-weight: 600;
 }
 
-@media (max-width: 63.937em) {
+@media (min-width: 40em) {
   h1 {
     font-size: 2.25rem;
   }
 }
 
-@media (max-width: 39.937em) {
+@media (min-width: 64em) {
   h1 {
-    font-size: 1.9rem;
+    font-size: 3.6rem;
+  }
+}
+
+h2 {
+  font-family: Overpass, sans-serif;
+  font-size: 1.5625rem;
+  font-weight: 600;
+}
+
+@media (min-width: 64em) {
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 40em) {
+  h2:not(.section--heading) {
+    font-size: 1.6875rem;
+  }
+}
+
+@media (max-width: 39.937em) {
+  h2.section--heading {
+    padding: 0 2.1875rem;
+  }
+}
+
+@media (min-width: 64em) {
+  h2.section--heading {
+    font-size: 1.6875rem;
   }
 }
 
 h3 {
   font-family: Overpass, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 300;
 }
 
-@media (max-width: 63.937em) {
+@media (min-width: 64em) {
   h3 {
-    font-size: 1rem;
+    font-size: 1.25rem;
+  }
+}
+
+p {
+  font-family: Overpass, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.text--block {
+  margin-top: 50px;
+}
+
+@media (min-width: 64em) {
+  .text--block h2 {
+    margin-top: 0;
+    margin-bottom: 35px;
   }
 }
 
@@ -110,6 +157,13 @@ h3 {
 
 .arrow {
   margin-left: 0.4em;
+}
+
+.arrow > svg {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+  transition: transform 250ms ease-out, -webkit-transform 250ms ease-out;
 }
 
 .arrow.open > svg {
@@ -504,6 +558,71 @@ h3 {
 .header .hero .start-cta {
   width: 18.125rem;
   margin: 0 auto;
+}
+
+.body {
+  text-align: center;
+  overflow: hidden;
+}
+
+@media (min-width: 64em) {
+  .body {
+    height: 1000px;
+  }
+}
+
+.body h2 {
+  color: #1f3f5b;
+}
+
+.body p {
+  color: #4b5862;
+}
+
+.body .introduction {
+  position: relative;
+  margin: 6.75rem 0 16.875rem 0;
+}
+
+@media (min-width: 64em) {
+  .body .introduction {
+    margin-top: 0rem;
+    padding-top: 10rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .body .introduction__text {
+    text-align: left;
+    width: 50%;
+  }
+}
+
+.body .introduction__heading {
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 64em) {
+  .body .introduction__heading {
+    margin-bottom: 6.875rem;
+  }
+}
+
+.body .introduction__image__mobile {
+  height: 335px;
+  background-image: url(../images/illustration-editor-mobile.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 300;
+  margin: 0 -1.5em;
+}
+
+.body .introduction__image__desktop {
+  position: absolute;
+  top: 4.25rem;
+  left: 50%;
 }
 
 @media (max-width: 63.937em) {

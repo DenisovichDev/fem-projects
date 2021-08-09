@@ -65,26 +65,69 @@ a:hover {
 
 h1 {
     font-family: $overpass;
-    font-size: $font-xlarge;
+    font-size: $font-large-mobile;
     font-weight: 600;
 
-    @include breakpoint-down("medium") {
+    @include breakpoint-up("medium") {
         font-size: $font-large;
     }
 
-    @include breakpoint-down("small") {
-        font-size: $font-large-mobile;
+    @include breakpoint-up("large") {
+        font-size: $font-xlarge;
+    }
+}
+
+h2 {
+    font-family: $overpass;
+    font-size: $font-med;
+    font-weight: 600;
+
+    @include breakpoint-up("large") {
+        font-size: $font-large;
+    }
+
+    &:not(.section--heading) {
+        @include breakpoint-up("medium") {
+            font-size: $font-larger-med;
+        }
+    }
+
+    &.section--heading {
+        @include breakpoint-down("small") {
+            padding: 0 2.1875rem;
+        }
+
+        @include breakpoint-up("large") {
+            font-size: $font-larger-med;
+        }
     }
 }
 
 h3 {
     font-family: $overpass;
-    font-size: $font-smaller-med;
+    font-size: $font-small;
     font-weight: 300;
 
-    @include breakpoint-down("medium") {
-        font-size: $font-small;
+    @include breakpoint-up("large") {
+        font-size: $font-smaller-med;
     }
+}
+
+p {
+    font-family: $overpass;
+    font-size: $font-small;
+    line-height: 1.7;
+}
+
+.text--block {
+    h2 {
+        @include breakpoint-up("large") {
+            margin-top: 0;
+            margin-bottom: 35px;
+        }
+    }
+
+    margin-top: 50px;
 }
 
 // Shadow
@@ -97,6 +140,10 @@ h3 {
 
 .arrow {
     margin-left: 0.4em;
+
+    > svg {
+        transition: transform 250ms ease-out;
+    }
 
     &.open > svg {
         transform: rotate(180deg);
