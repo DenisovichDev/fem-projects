@@ -64,12 +64,12 @@ a:hover {
 }
 
 .container {
-  padding: 0 8em;
+  padding: 0 1.5rem;
 }
 
-@media (max-width: 63.937em) {
+@media (min-width: 64em) {
   .container {
-    padding: 0 1.5em;
+    padding: 0 8rem;
   }
 }
 
@@ -97,15 +97,15 @@ h2 {
   font-weight: 600;
 }
 
-@media (min-width: 64em) {
-  h2 {
-    font-size: 2.25rem;
+@media (min-width: 40em) {
+  h2.bigger--font {
+    font-size: 1.6875rem;
   }
 }
 
-@media (min-width: 40em) {
-  h2:not(.section--heading) {
-    font-size: 1.6875rem;
+@media (min-width: 64em) {
+  h2.bigger--font {
+    font-size: 2.25rem;
   }
 }
 
@@ -565,12 +565,6 @@ p {
   overflow: hidden;
 }
 
-@media (min-width: 64em) {
-  .body {
-    height: 1000px;
-  }
-}
-
 .body h2 {
   color: #1f3f5b;
 }
@@ -586,8 +580,9 @@ p {
 
 @media (min-width: 64em) {
   .body .introduction {
-    margin-top: 0rem;
+    margin: 0rem;
     padding-top: 10rem;
+    height: 1000px;
   }
 }
 
@@ -623,6 +618,93 @@ p {
   position: absolute;
   top: 4.25rem;
   left: 50%;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.body .highlight {
+  position: relative;
+  margin: 0 -1.5rem;
+  padding-top: 14.375rem;
+  padding-bottom: 7.5rem;
+  background-image: url(../images/bg-pattern-circles.svg), -webkit-gradient(linear, left top, right top, from(#2c2d3f), to(#3f4164));
+  background-image: url(../images/bg-pattern-circles.svg), linear-gradient(to right, #2c2d3f, #3f4164);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: -108% 90%, center;
+  border-radius: 0 97px 0 97px;
+}
+
+@media (min-width: 64em) {
+  .body .highlight {
+    margin: 0 -8rem;
+  }
+}
+
+@media (min-width: 40em) {
+  .body .highlight {
+    padding-top: 7.5rem;
+  }
+}
+
+@media (max-width: 39.937em) {
+  .body .highlight {
+    background-size: 150%, auto;
+    background-position: 50% -200px, center;
+  }
+}
+
+.body .highlight__phones {
+  position: absolute;
+  max-width: 375px;
+  top: -184px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (min-width: 40em) {
+  .body .highlight__phones {
+    top: 47px;
+    left: 26%;
+  }
+}
+
+@media (min-width: 64em) {
+  .body .highlight__phones {
+    max-width: 600px;
+    top: -65px;
+    left: 26%;
+  }
+}
+
+.body .highlight__heading {
+  color: white;
+  margin: 0;
+  margin-bottom: 1.5625rem;
+}
+
+@media (max-width: 63.937em) {
+  .body .highlight__heading {
+    font-size: 2.25rem;
+  }
+}
+
+.body .highlight p {
+  color: white;
+  margin: 0;
+}
+
+.body .highlight .text--block {
+  position: relative;
+  margin-top: 0;
+}
+
+@media (min-width: 40em) {
+  .body .highlight .text--block {
+    width: 50%;
+    left: 50%;
+  }
 }
 
 @media (max-width: 63.937em) {

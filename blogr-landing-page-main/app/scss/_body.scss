@@ -4,11 +4,6 @@
     text-align: center;
     overflow: hidden;
 
-    @include breakpoint-up("large") {
-        //height: 882px;
-        height: 1000px;
-    }
-
     h2 {
         color: $veryDarkBlue;
     }
@@ -24,8 +19,9 @@
         margin: 6.75rem 0 16.875rem 0;
 
         @include breakpoint-up("large") {
-            margin-top: 0rem;
+            margin: 0rem;
             padding-top: 10rem;
+            height: 1000px;
         }
 
         &__text {
@@ -58,6 +54,74 @@
             position: absolute;
             top: 4.25rem;
             left: 50%;
+            transform: scale(0.95);
+        }
+    }
+
+    .highlight {
+        position: relative;
+        margin: 0 -1.5rem;
+        @include breakpoint-up("large") {
+            margin: 0 -8rem;
+        }
+        padding-top: 14.375rem;
+        padding-bottom: 7.5rem;
+        @include breakpoint-up("medium") {
+            padding-top: 7.5rem;
+        }
+        background-image: url(../images/bg-pattern-circles.svg), $bodyGradient;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: -108% 90%, center;
+        @include breakpoint-down("small") {
+            background-size: 150%, auto;
+            background-position: 50% -200px, center;
+        }
+
+        border-radius: 0 97px 0 97px;
+
+        &__phones {
+            position: absolute;
+            max-width: 375px;
+            top: -184px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include breakpoint-up("medium") {
+                top: 47px;
+                left: 26%;
+            }
+
+            @include breakpoint-up("large") {
+                max-width: 600px;
+                top: -65px;
+                left: 26%;
+            }
+        }
+
+        &__heading {
+            color: $white;
+            margin: 0;
+            margin-bottom: 1.5625rem;
+
+            @include breakpoint-down("medium") {
+                font-size: $font-large;
+            }
+        }
+
+        p {
+            color: $white;
+            margin: 0;
+        }
+
+        .text--block {
+            position: relative;
+            margin-top: 0;
+
+            @include breakpoint-up("medium") {
+                width: 50%;
+                left: 50%;
+            }
         }
     }
 }
