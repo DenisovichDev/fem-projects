@@ -7,8 +7,8 @@ const introArrowSVGPath = document.querySelectorAll('.header__dropdown > li i sv
 const hamburger = document.querySelector(".header__hamburger");
 const header = document.querySelector(".header");
 const headerMenu = document.querySelector(".header__menu");
-const hamburgerItems = document.querySelectorAll('.header__menu__items > li');
-const hamburgerItemsMenu = document.querySelectorAll('.header__menu__items > li ul');
+const hamburgerItems = document.querySelectorAll('.hamburger-items');
+const hamburgerItemsMenu = document.querySelectorAll('.header__dropdown__menu.dropdown--hamburger');
 const hamburgerArrows = document.querySelectorAll('.header__menu__items .arrow');
 const hamburgerArrowsSVGPath = document.querySelectorAll('.header__menu__items .arrow > svg path');
 
@@ -79,7 +79,7 @@ hamburgerItems.forEach(function (option, idx) {
             closeAllOptions(hamburgerItemsMenu, hamburgerArrows);
             panel.classList.add('open');
             hamburgerArrows[idx].classList.add("open");
-            panel.style.maxHeight = (panel.scrollHeight + 50) + 'px';
+            panel.style.maxHeight = (panel.scrollHeight * 2 + 50) + 'px'; // Mult by 2 because overflowed flex contents is based on center
         }
 
 

@@ -94,7 +94,7 @@
             &.dropdown--hamburger {
                 // position: absolute;
                 background-color: $greyishBlueAlpha;
-                top: 1.5625rem;
+                top: 0;
                 left: 0;
                 width: 17.4375rem;
                 font-size: $font-smaller-med;
@@ -176,19 +176,25 @@
                 cursor: pointer;
             }
 
-            .header__dropdown__menu {
-                display: flex;
-                cursor: default;
-                position: relative;
-                padding: 0 1.1625rem;
-                max-height: 0;
-                transition: max-height 250ms ease-out, padding 250ms ease-out;
+            > li:nth-of-type(even) {
+                margin: 0;
+                padding: 0;
 
-                // Hambuger Item Opened
+                .header__dropdown__menu {
+                    display: flex;
+                    cursor: default;
+                    position: relative;
+                    padding: 0 1.1625rem;
+                    max-height: 0;
+                    transition: max-height 250ms ease-out,
+                        padding 250ms ease-out;
 
-                &.open {
-                    color: $veryDarkGreyishBlue;
-                    //padding-block: 1.5625rem;
+                    // Hambuger Item Opened
+
+                    &.open {
+                        color: $veryDarkGreyishBlue;
+                        padding-block: 1.5625rem;
+                    }
                 }
             }
         }
