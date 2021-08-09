@@ -92,7 +92,7 @@
             // For Hamburger
 
             &.dropdown--hamburger {
-                position: absolute;
+                // position: absolute;
                 background-color: $greyishBlueAlpha;
                 top: 1.5625rem;
                 left: 0;
@@ -177,15 +177,18 @@
             }
 
             .header__dropdown__menu {
+                display: flex;
                 cursor: default;
                 position: relative;
-                padding: 1.5625em 1.1625em;
+                padding: 0 1.1625rem;
+                max-height: 0;
+                transition: max-height 250ms ease-out, padding 250ms ease-out;
 
                 // Hambuger Item Opened
 
                 &.open {
-                    display: flex;
                     color: $veryDarkGreyishBlue;
+                    //padding-block: 1.5625rem;
                 }
             }
         }

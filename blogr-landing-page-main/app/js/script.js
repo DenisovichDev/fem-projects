@@ -39,6 +39,7 @@ function closeAllOptions(nodeList, arrowList) {
     nodeList.forEach((option, idx) => {
         option.classList.remove("open");
         arrowList[idx].classList.remove("open");
+        hamburgerItemsMenu[idx].style.maxHeight = null;
     });
 }
 
@@ -68,15 +69,19 @@ hamburger.addEventListener('click', () => {
 hamburgerItems.forEach(function (option, idx) {
     option.addEventListener('click', () => {
 
-        if (hamburgerItemsMenu[idx].classList.contains('open')) {
-            hamburgerItemsMenu[idx].classList.remove('open', 'fade-out');
-            hamburgerItemsMenu[idx].classList.remove('fade-in');
+        let panel = hamburgerItemsMenu[idx];
+
+        if (panel.classList.contains('open')) {
+            panel.classList.remove('open');
             hamburgerArrows[idx].classList.remove("open");
+            panel.style.maxHeight = null;
         } else {
             closeAllOptions(hamburgerItemsMenu, hamburgerArrows);
-            hamburgerItemsMenu[idx].classList.add('open', 'fade-in');
-            hamburgerItemsMenu[idx].classList.remove('fade-out');
+            panel.classList.add('open');
             hamburgerArrows[idx].classList.add("open");
+            panel.style.maxHeight = (panel.scrollHeight + 50) + 'px';
         }
+
+
     })
 })
