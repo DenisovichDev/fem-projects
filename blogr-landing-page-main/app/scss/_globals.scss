@@ -37,6 +37,10 @@ body {
         justify-content: space-between;
     }
 
+    &-jc-s {
+        justify-content: flex-start;
+    }
+
     &-ai-c {
         align-items: center;
     }
@@ -56,6 +60,7 @@ a:hover {
 
 .container {
     padding: 0 1.5rem;
+
     @include breakpoint-up("large") {
         padding: 0 8rem;
     }

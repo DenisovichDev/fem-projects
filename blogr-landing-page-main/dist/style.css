@@ -44,6 +44,12 @@ body.noscroll {
           justify-content: space-between;
 }
 
+.flex-jc-s {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .flex-ai-c {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -336,8 +342,6 @@ p {
 
 .header__logo {
   margin: 0;
-  width: 5.25;
-  height: 2.06;
 }
 
 .header__hamburger {
@@ -749,6 +753,97 @@ p {
   right: 50%;
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+.footer {
+  background-color: #25252d;
+  border-radius: 0 97px 0 0;
+  padding-top: 4.625rem;
+  padding-bottom: 4.625rem;
+}
+
+@media (min-width: 64em) {
+  .footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.footer__logo {
+  margin: 0;
+  margin-bottom: 5rem;
+}
+
+.footer .links-container {
+  width: 100%;
+}
+
+@media (min-width: 40em) {
+  .footer .links-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer .links-container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-left: 185px;
+    margin-right: 128px;
+  }
+}
+
+.footer .links-container .footer__links {
+  list-style: none;
+  text-align: center;
+  font-family: Overpass, sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+  padding: 0;
+  color: #c8c8cb;
+  margin: 0 0 3.5rem 0;
+}
+
+@media (min-width: 64em) {
+  .footer .links-container .footer__links {
+    text-align: left;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer .links-container .footer__links {
+    font-size: 1rem;
+  }
+}
+
+.footer .links-container .footer__links > li:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.footer .links-container .footer__links > li:first-of-type {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: white;
 }
 
 @media (max-width: 63.937em) {
