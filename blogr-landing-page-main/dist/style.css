@@ -714,7 +714,7 @@ p {
 
 .body .features__image__mobile {
   height: 335px;
-  background-image: url(../../images/illustration-laptop-mobile.svg);
+  background-image: url(../images/illustration-laptop-mobile.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
