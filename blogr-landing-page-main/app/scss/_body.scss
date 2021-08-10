@@ -46,8 +46,7 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
-            z-index: 300;
-            margin: 0 -1.5em;
+            margin: 0 -1.5rem;
         }
 
         &__image__desktop {
@@ -57,6 +56,8 @@
             transform: scale(0.95);
         }
     }
+
+    // Highlight Part
 
     .highlight {
         position: relative;
@@ -122,6 +123,51 @@
                 width: 50%;
                 left: 50%;
             }
+        }
+    }
+
+    // Features
+
+    .features {
+        // All the previous styles are included
+
+        margin-top: 3.125rem;
+        margin-bottom: 4.6875rem;
+        position: relative;
+
+        &__image__mobile {
+            height: 335px;
+            background-image: url(../../images/illustration-laptop-mobile.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: 0 -4em;
+        }
+
+        @include breakpoint-up("large") {
+            margin: 0rem;
+            padding: 19.25rem 0;
+        }
+
+        &__text {
+            position: relative;
+
+            @include breakpoint-up("large") {
+                text-align: left;
+                left: 50%;
+                width: 50%;
+
+                &__section:first-of-type {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        &__image__desktop {
+            position: absolute;
+            top: 6.25rem;
+            right: 50%;
+            transform: scale(0.95);
         }
     }
 }

@@ -610,8 +610,7 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  z-index: 300;
-  margin: 0 -1.5em;
+  margin: 0 -1.5rem;
 }
 
 .body .introduction__image__desktop {
@@ -705,6 +704,51 @@ p {
     width: 50%;
     left: 50%;
   }
+}
+
+.body .features {
+  margin-top: 3.125rem;
+  margin-bottom: 4.6875rem;
+  position: relative;
+}
+
+.body .features__image__mobile {
+  height: 335px;
+  background-image: url(../../images/illustration-laptop-mobile.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 -4em;
+}
+
+@media (min-width: 64em) {
+  .body .features {
+    margin: 0rem;
+    padding: 19.25rem 0;
+  }
+}
+
+.body .features__text {
+  position: relative;
+}
+
+@media (min-width: 64em) {
+  .body .features__text {
+    text-align: left;
+    left: 50%;
+    width: 50%;
+  }
+  .body .features__text__section:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.body .features__image__desktop {
+  position: absolute;
+  top: 6.25rem;
+  right: 50%;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 @media (max-width: 63.937em) {
