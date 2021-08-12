@@ -48,7 +48,7 @@ function closeAllOptions(nodeList, arrowList) {
 hamburger.addEventListener('click', () => {
     if (header.classList.contains('open')) {
         // Hamburger Menu Close
-
+        closeAllOptions(hamburgerItemsMenu, hamburgerArrows);
         header.classList.remove('open');
         body.classList.remove('noscroll');
         headerMenu.classList.add('fade-out');
