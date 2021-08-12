@@ -25,6 +25,13 @@ Users should be able to:
 -   View the optimal layout for the site depending on their device's screen size
 -   See hover states for all interactive elements on the page
 
+### Screenshots
+
+![Desktop01](screenshots/ss1.png)
+![Desktop02](screenshots/ss2.png)
+![Mobile01](screenshots/ss3.png)
+![Mobile02](screenshots/ss4.png)
+
 ### Links
 
 -   [Solution Source Code](https://github.com/Ivan-Denisovich-py/fem-projects/tree/main/blogr-landing-page-main)
@@ -55,13 +62,6 @@ I look for your feedback!
 -   Flexbox
 -   Mobile-first workflow
 -   Vanilla JavaScript, no libraries
-
-### Screenshots
-
-![Desktop01](screenshots/ss1.png)
-![Desktop02](screenshots/ss2.png)
-![Mobile01](screenshots/ss3.png)
-![Mobile02](screenshots/ss4.png)
 
 ### Continued development
 
