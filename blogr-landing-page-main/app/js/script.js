@@ -85,3 +85,36 @@ hamburgerItems.forEach(function (option, idx) {
 
     })
 })
+
+// Parallax
+
+const parallaxElements = document.querySelectorAll(".parallax")
+
+let xScrollPosition, yScrollPosition;
+
+let yOffset = 190;
+
+window.addEventListener('scroll', () => {
+
+    parallaxElements.forEach(element => {
+
+        yScrollPosition = window.scrollY;
+
+        yTranslateValue = map(yScrollPosition, 0, body.scrollHeight - window.innerHeight, -yOffset, yOffset);
+
+        setTranslateY(yTranslateValue, element);
+    });
+
+})
+
+function setTranslateY(yPos, el) {
+    if (el.classList.contains('absolute')) {
+        el.style.transform = "translate( -50%, " + yPos + "px)";
+        return
+    }
+    el.style.transform = "translateY(" + yPos + "px)";
+}
+
+function map(val, m1, m2, n1, n2) {
+    return ((((val - m1) / (m2 - m1)) * (n2 - n1)) + n1)
+}
