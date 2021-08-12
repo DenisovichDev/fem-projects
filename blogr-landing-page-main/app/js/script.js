@@ -86,22 +86,20 @@ hamburgerItems.forEach(function (option, idx) {
     })
 })
 
-// Parallax
+// Parallax -----------------------------
 
 const parallaxElements = document.querySelectorAll(".parallax")
 
 let xScrollPosition, yScrollPosition;
-
 let yOffset = 190;
+
+
 
 window.addEventListener('scroll', () => {
 
     parallaxElements.forEach(element => {
-
         yScrollPosition = window.scrollY;
-
         yTranslateValue = map(yScrollPosition, 0, body.scrollHeight - window.innerHeight, -yOffset, yOffset);
-
         setTranslateY(yTranslateValue, element);
     });
 
@@ -118,3 +116,23 @@ function setTranslateY(yPos, el) {
 function map(val, m1, m2, n1, n2) {
     return ((((val - m1) / (m2 - m1)) * (n2 - n1)) + n1)
 }
+
+// For editor SVG
+
+const stroke = document.getElementById("stroke-svg");
+const defaultTranslateYVal = 242;
+const offset = 200;
+
+function checkStroke() {
+    const triggerBottom = (window.innerHeight / 3) * 2;
+
+    const strokeTop = stroke.getBoundingClientRect().top;
+
+    if (strokeTop < triggerBottom) {
+        stroke.style.transform = "translate(0, 242px)";
+    } else {
+        stroke.style.transform = "translate(0, 380px)";
+    }
+}
+
+window.addEventListener('scroll', checkStroke);
