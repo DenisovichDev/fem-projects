@@ -69,8 +69,8 @@ I wanna work on the parallax library and add it to this project later if I'd be 
 
 ### Useful resources
 
--   [Coder Coder](https://www.youtube.com/thecodercoder) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
--   [Kevin Powell](https://www.youtube.com/kevinpowell) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+-   [Coder Coder](https://www.youtube.com/thecodercoder)
+-   [Kevin Powell](https://www.youtube.com/kevinpowell)
 -   [Brad's](https://www.youtube.com/user/TechGuyWeb) very good and compact [sass crash course](https://www.youtube.com/watch?v=nu5mdN2JIwM)
 
 ## Author
