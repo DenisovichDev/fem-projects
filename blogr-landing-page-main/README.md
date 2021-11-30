@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 -   [Solution Source Code](https://github.com/Ivan-Denisovich-py/fem-projects/tree/main/blogr-landing-page-main)
--   [Live Site](https://ivan-denisovich-py.github.io/fem-projects/blogr-landing-page-main)
+-   [Live Site](https://denisovichdev.github.io/fem-projects/blogr-landing-page-main)
 
 ## My process
 
