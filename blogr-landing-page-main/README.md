@@ -75,6 +75,6 @@ I wanna work on the parallax library and add it to this project later if I'd be 
 
 ## Author
 
--   Links - [Bhaswar Chakraborty](https://ivan-denisovich-py.github.io/link-tree/)
+-   Links - [Bhaswar Chakraborty](https://denisovichdev.github.io/link-tree/)
 -   Frontend Mentor - [@Ivan-Denisovich-py](https://www.frontendmentor.io/profile/Ivan-Denisovich-py)
 -   Twitter - [@DenisovichPy](https://www.twitter.com/DenisovichPy)
